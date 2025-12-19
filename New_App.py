@@ -13,7 +13,7 @@ from session import init_session, check_session_timeout, SESSION_TIMEOUT
 from audit import log_login
 from rbac import filter_employee_data
 
-EMPLOYEE_FILE = "data/employees.csv"
+EMPLOYEE_FILE = "employees.csv"
 
 st.set_page_config(page_title="OrgaKnow | Retention Intelligence", layout="wide")
 
@@ -392,7 +392,7 @@ st.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown("---")
 
-ACTIONS_FILE = "data/attrition_actions.csv"
+ACTIONS_FILE = "attrition_actions.csv"
 
 if os.path.exists(ACTIONS_FILE):
     actions_df = pd.read_csv(ACTIONS_FILE)
